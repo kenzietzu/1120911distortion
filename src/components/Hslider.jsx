@@ -24,12 +24,12 @@ const Image = styled.img`
   height: 450px;
   object-fit: cover;
   object-position: center;
-  padding: 0 2rem;
+  padding: 0 4rem;
 `;
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Slider = () => {
+const Hslider = () => {
   const sectionRef = useRef(null);
   const stickyRef = useRef(null);
   const scrollRef = useRef(null);
@@ -78,4 +78,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default Hslider;

@@ -1,38 +1,52 @@
-import { useEffect, useRef } from "react";
-import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
-import gsap from "gsap";
+import { Suspense, useEffect, useRef } from "react";
 import GlobalStyles from "./GlobalStyles";
-import Header from "./components/Header";
-import About from "./components/About";
-import Slider from "./components/Slider";
+import { Canvas } from "@react-three/fiber";
+import { styled } from "styled-components";
+import Content from "./components/Content";
+import state from "./store";
+
+const Main = styled.main`
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+`;
+
+const ScrollArea = styled.div`
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: auto;
+`;
 
 function App() {
-  const lenisRef = useRef(null);
-  useLenis(({ scroll }) => {
-    // called every scroll
-  });
-
-  useEffect(() => {
-    function update(time) {
-      lenisRef.current?.raf(time * 100);
-    }
-
-    gsap.ticker.add(update);
-
-    return () => {
-      gsap.ticker.remove(update);
-    };
-  });
+  const scrollArea = useRef();
+  const onScroll = (e) => (state.top.current = e.target.scrollTop);
+  useEffect(() => void onScroll({ target: scrollArea.current }), []);
 
   return (
-    <>
+    <Main>
       <GlobalStyles />
-      <ReactLenis root ref={lenisRef} autoRaf={false}>
-        <Header />
-        <Slider />
-        <About />
-      </ReactLenis>
-    </>
+      <Canvas
+        orthographic
+        linear
+        camera={{ zoom: state.zoom, position: [0, 0, 500] }}
+      >
+        <Suspense fallback={null}>
+          <Content />
+        </Suspense>
+      </Canvas>
+      <ScrollArea ref={scrollArea} onScroll={onScroll}>
+        {new Array(state.sections).fill().map((_, index) => (
+          <div
+            key={index}
+            id={"0" + index}
+            style={{ height: `${(state.pages / state.sections) * 100}vh` }}
+          />
+        ))}
+      </ScrollArea>
+    </Main>
   );
 }
 

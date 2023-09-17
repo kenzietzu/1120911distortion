@@ -42,22 +42,19 @@ a{
     text-decoration:none;
 }
 
-.lenis {
-	overflow-y: auto;
+Canvas {
+  z-index: 10;
 }
 
-//捲軸底色
-.lenis::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: var(--color-dark);
+.htmlHeader {
+  font-size: 4rem;
+  width: 100%;
 }
-//捲軸寬度
-.lenis::-webkit-scrollbar {
-  width: 6px;
-}
-//捲軸本體顏色
-.lenis::-webkit-scrollbar-thumb {
-  background-color: var(--color-light);
+
+.htmlText {
+  font-size: 1.5rem;
+  width: 45%;
+  opacity: 60%;
 }
 
 `;
