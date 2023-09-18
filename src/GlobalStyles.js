@@ -46,6 +46,17 @@ Canvas {
   z-index: 10;
 }
 
+.htmlTitle {
+  font-size: 8rem;
+  color: #2ec4b6;
+}
+
+.htmlSubtitle {
+  font-size: 1.5rem;
+  width: 45%;
+  margin-top: 60px;
+}
+
 .htmlHeader {
   font-size: 4rem;
   width: 100%;
@@ -55,6 +66,7 @@ Canvas {
   font-size: 1.5rem;
   width: 45%;
   opacity: 60%;
+  margin-top: 280px;
 }
 
 `;

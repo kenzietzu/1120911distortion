@@ -49,7 +49,7 @@ const ImagePlane = ({
         <Html center wrapperClass="htmlHeader" position={[0, 0, 0]}>
           {header}
         </Html>
-        <Html center wrapperClass="htmlText" position={[0, -0.75, 0]}>
+        <Html center wrapperClass="htmlText">
           {text}
         </Html>
       </mesh>

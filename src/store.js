@@ -1,12 +1,12 @@
 import { createRef } from "react";
 
 const state = {
-  sections: 6,
-  pages: 6,
+  sections: 7,
+  pages: 7,
   zoom: 1.2,
   paragraphs: [
     {
-      offset: 0,
+      offset: 1,
       factor: 2,
       header: "Streets of London",
       image:
@@ -15,7 +15,7 @@ const state = {
       text: "Two thousand pharmacologists and bio-chemists were subsidized. Six years later it was being produced commercially.",
     },
     {
-      offset: 1,
+      offset: 2,
       factor: 2,
       header: "Wading",
       image:
@@ -24,7 +24,7 @@ const state = {
       text: "The man who comes back through the Door in the Wall will never be quite the same as the man who went out. He will be wiser but less sure, happier but less self-satisfied, humbler in acknowledging his ignorance yet better equipped to understand the relationship of words to things, of systematic reasoning to the unfathomable mystery which it tries, forever vainly, to comprehend.",
     },
     {
-      offset: 2,
+      offset: 3,
       factor: 2,
       header: "Shoulders of Giants",
       image:
@@ -33,7 +33,7 @@ const state = {
       text: "The substance can take you to heaven but it can also take you to hell. Or else to both, together or alternately. Or else (if you're lucky, or if you've made yourself ready) beyond either of them. And then beyond the beyond, back to where you started from — back to here, back to New Rotham sted, back to business as usual. Only now, of course, business as usual is completely different.",
     },
     {
-      offset: 3,
+      offset: 4,
       factor: 2,
       header: "Red Observation",
       image:
@@ -42,7 +42,7 @@ const state = {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
     },
     {
-      offset: 4,
+      offset: 5,
       factor: 2,
       header: "DJ turntable",
       image:
@@ -51,7 +51,7 @@ const state = {
       text: "By cultivating the state of mind that makes it possible for the dazzling ecstatic insights to become permanent and habitual illuminations. By getting to know oneself to the point where one won’t be compelled by one’s unconscious to do all the ugly, absurd, self-stultifying things that one so often finds oneself doing.",
     },
     {
-      offset: 5,
+      offset: 6,
       factor: 1.5,
       header: "Swaggin’ at the SUPERMARKET",
       image:
