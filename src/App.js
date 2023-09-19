@@ -1,9 +1,10 @@
-import { Suspense, useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import GlobalStyles from "./GlobalStyles";
 import { Canvas } from "@react-three/fiber";
 import { styled } from "styled-components";
 import Content from "./components/Content";
 import state from "./store";
+import Loader from "./components/Loader";
 
 const Main = styled.main`
   width: 100vw;
@@ -21,6 +22,7 @@ const ScrollArea = styled.div`
 `;
 
 function App() {
+  const [Loaded, setLoaded] = useState(false);
   const scrollArea = useRef();
   const onScroll = (e) => (state.top.current = e.target.scrollTop);
   useEffect(() => void onScroll({ target: scrollArea.current }), []);
@@ -28,6 +30,7 @@ function App() {
   return (
     <Main>
       <GlobalStyles />
+      {!Loaded && <Loader setLoaded={setLoaded} />}
       <Canvas
         orthographic
         linear
@@ -37,6 +40,7 @@ function App() {
           <Content />
         </Suspense>
       </Canvas>
+
       <ScrollArea ref={scrollArea} onScroll={onScroll}>
         {new Array(state.sections).fill().map((_, index) => (
           <div

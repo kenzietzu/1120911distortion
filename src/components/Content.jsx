@@ -3,8 +3,8 @@ import { useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import Paragraph from "./Paragraph";
 import state from "../store";
-import { Html, Text } from "@react-three/drei";
-import { Block, useBlock } from "../block";
+import { Html } from "@react-three/drei";
+import { Block } from "../block";
 
 function Content() {
   const images = useLoader(
@@ -12,7 +12,6 @@ function Content() {
     state.paragraphs.map(({ image }) => image)
   );
   useMemo(() => images.forEach((texture) => (texture) => texture), [images]);
-  const { contentMaxWidth: w } = useBlock();
   return (
     <>
       <Block factor={1} offset={0}>

@@ -42,10 +42,6 @@ a{
     text-decoration:none;
 }
 
-Canvas {
-  z-index: 10;
-}
-
 .htmlTitle {
   font-size: 8rem;
   color: #2ec4b6;
