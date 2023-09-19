@@ -60,9 +60,13 @@ a{
 
 .htmlText {
   font-size: 1.5rem;
-  width: 75%;
+  width: 50%;
   opacity: 60%;
-  margin-top: 250px;
+  margin-top: 280px;
+  @media (max-width: 680px) {
+    width: 75%;
+    margin-top: 250px;
+  }
 }
 
 `;
