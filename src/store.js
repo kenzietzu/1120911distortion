@@ -53,7 +53,7 @@ const state = {
     {
       offset: 6,
       factor: 1.5,
-      header: "Swaggin’ at the SUPERMARKET",
+      header: "Swaggin’",
       image:
         "https://images.unsplash.com/photo-1535365229039-e36084b548f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80",
       aspect: 1.5,

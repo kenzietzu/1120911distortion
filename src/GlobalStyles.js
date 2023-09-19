@@ -49,7 +49,7 @@ a{
 
 .htmlSubtitle {
   font-size: 1.5rem;
-  width: 45%;
+  width: 70%;
   margin-top: 60px;
 }
 
@@ -60,9 +60,9 @@ a{
 
 .htmlText {
   font-size: 1.5rem;
-  width: 45%;
+  width: 75%;
   opacity: 60%;
-  margin-top: 280px;
+  margin-top: 250px;
 }
 
 `;
